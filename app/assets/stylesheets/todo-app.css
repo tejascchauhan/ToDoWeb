@@ -103,3 +103,6 @@ section {
   color: #bfb8cc;
   margin-left: 1em;
 }
+.line-through{
+  text-decoration: line-through;
+}
