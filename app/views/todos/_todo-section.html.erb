@@ -8,7 +8,7 @@
       <li class="TodoItem">
 
         <%= form_with url: "/todos/#{todo.id}", method: :put do |form| %>
-          <input type="checkbox" class="TodoItem-checkbox" name="completed" <%= todo.completed ? "checked":"" %> onClick="this.form.submit()">
+          <%= form.check_box :completed, class:"TodoItem-checkbox", checked:todo.completed, onClick:"this.form.submit()" %>
         <% end %>
 
         <p class="<%= todo.completed ? 'line-through':'' %>"><%= todo.todo_text %></p>
