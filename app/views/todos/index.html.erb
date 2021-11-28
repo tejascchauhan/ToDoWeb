@@ -2,11 +2,11 @@
   <article>
     <h1 class="TodoApp--title">My Todo-list</h1>
 
-    <form class="AddTodo" method="POST" action="/todos" accept-charset="UTF-8">
+    <%= form_with class: "AddTodo", url: "/todos", method: :post do |form| %>
       <input type="text" class="AddTodo-text" name="todo_text" placeholder="What's next?">
       <input type="date" class="AddTodo-date" name="due_date">
       <input type="submit" class="AddTodo-btn" value="Add">
-    </form>
+    <% end %>
 
     <%= render partial: "todo-section", locals: {
       section_title: "Overdue",
