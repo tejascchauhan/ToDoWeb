@@ -99,7 +99,7 @@ section {
 .TodoItem:hover > .TodoItem-delete {
   display: block;
 }
-.TodoItem-delete img {
+.TodoItem-delete .trash {
   width: 14px;
   color: #bfb8cc;
   margin-left: 1em;
