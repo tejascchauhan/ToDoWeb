@@ -1,0 +1,75 @@
+<main class="TodoApp">
+  <article>
+    <h1 class="TodoApp--title">My Todo-list</h1>
+    <section class="AddTodo">
+      <input type="text" class="AddTodo-text" name="todo_text" placeholder="What's next?">
+      <input type="date" class="AddTodo-date" name="due_date">
+      <input type="button" class="AddTodo-btn" name="todo_add" value="Add">
+    </section>
+    <section class="TodoSection">
+      <div class="TodoSection-title">
+        <p class="TodoSection-title-text">Due Today</p>
+        <p class="TodoSection-title-remainCount">0/<%= Todo.due_today.count %></p>
+      </div>
+      <ul>
+        <% Todo.all.each do |todo| %>
+        <li class="TodoItem">
+          <input type="checkbox" class="TodoItem-checkbox">
+          <%= todo.todo_text %>
+          <p class="TodoItem-overdueLabel">Overdue</p>
+          <a class="TodoItem-delete" href="javascript:void(0)">
+            <img src="images/trash-can-outline.svg" alt="Delete" class="TodoItem-deleteSVG">
+          </a>
+        </li>
+        <% end %>
+      </ul>
+    </section>
+    <section class="TodoSection">
+      <div class="TodoSection-title">
+        <p class="TodoSection-title-text">Due Tomorrow</p>
+        <p class="TodoSection-title-remainCount">0/3</p>
+      </div>
+      <ul>
+        <li class="TodoItem">
+          <input type="checkbox" class="TodoItem-checkbox">
+          Complete Level 6
+          <a class="TodoItem-delete" href="javascript:void(0)">
+            <img src="images/trash-can-outline.svg" alt="Delete" class="TodoItem-deleteSVG">
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="TodoSection">
+      <div class="TodoSection-title">
+        <p class="TodoSection-title-text">Remaining</p>
+        <p class="TodoSection-title-remainCount">0/3</p>
+      </div>
+      <ul>
+        <li class="TodoItem">
+          <input type="checkbox" class="TodoItem-checkbox">
+          Type Something
+          <p class="TodoItem-date">Jan 21</p>
+          <a class="TodoItem-delete" href="javascript:void(0)">
+            <img src="images/trash-can-outline.svg" alt="Delete" class="TodoItem-deleteSVG">
+          </a>
+        </li>
+        <li class="TodoItem">
+          <input type="checkbox" class="TodoItem-checkbox">
+          Type Something
+          <p class="TodoItem-date">Jan 21</p>
+          <a class="TodoItem-delete" href="javascript:void(0)">
+            <img src="images/trash-can-outline.svg" alt="Delete" class="TodoItem-deleteSVG">
+          </a>
+        </li>
+        <li class="TodoItem">
+          <input type="checkbox" class="TodoItem-checkbox">
+          Type Something
+          <p class="TodoItem-date">Jan 21</p>
+          <a class="TodoItem-delete" href="javascript:void(0)">
+            <img src="images/trash-can-outline.svg" alt="Delete" class="TodoItem-deleteSVG">
+          </a>
+        </li>
+      </ul>
+    </section>
+  </article>
+</main>
